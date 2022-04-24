@@ -34,7 +34,7 @@
 .container .btn,
 .fixed-container .btn {
   background-color: rgb(91, 175, 91);
-  color:black;
+  color: black;
   border: none;
 }
 
@@ -83,12 +83,13 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-.box{
+.box {
   background-image: url(/Images/showcase-bg-img.jpg);
   background-size: cover;
   height: 100vh;
-  box-shadow:inset 0 0 0 2000px rgba(61,94,93, 0.5);
-  background-attachment: fixed; /*Fix image to background on scroll*/
+  box-shadow: inset 0 0 0 2000px rgba(61, 94, 93, 0.5);
+  background-attachment: fixed;
+  /*Fix image to background on scroll*/
 }
 
 /* Header */
@@ -114,7 +115,7 @@ body {
   color: white
 }
 
-/* Showcase */ 
+/* Showcase */
 .showcase {
   height: 70vh;
   width: 50vw;
@@ -139,7 +140,7 @@ body {
   color: white;
 }
 
-.showcase-two h1{
+.showcase-two h1 {
   width: 50vw;
 }
 
@@ -150,7 +151,7 @@ body {
   font-size: 18px;
 }
 
-/* Testimonial */ 
+/* Testimonial */
 .testimonial {
   background-color: #E0F1EB;
   align-items: center;
@@ -159,7 +160,7 @@ body {
 
 /* Container */
 .container,
-.fixed-container{
+.fixed-container {
   gap: 150px;
   padding: 75px 40px;
 }
@@ -193,11 +194,12 @@ body {
   background-image: url(/Images/pexels-fauxels-3182812.jpg);
   background-size: cover;
   height: 90vh;
-  box-shadow:inset 0 0 0 2000px rgba(61,94,93, 0.5);
+  box-shadow: inset 0 0 0 2000px rgba(61, 94, 93, 0.5);
   color: white;
   justify-content: space-between;
   align-items: center;
-  background-attachment: fixed; /*Fix image to background on scroll*/
+  background-attachment: fixed;
+  /*Fix image to background on scroll*/
 }
 
 .fixed-container h1,
@@ -291,6 +293,12 @@ body {
   padding: 15px 0 15px 30px;
 }
 
+.grid-box-2:hover {
+  color: green;
+  transform: scale(1.09);
+  transition: 0.5s ease;
+}
+
 /* Footer */
 .footer {
   display: grid;
@@ -317,4 +325,104 @@ body {
 
 .social-img {
   filter: invert(1);
+}
+
+@media (max-width: 700px) {
+  .header nav {
+    display: none;
+  }
+
+  .showcase {
+    padding-left: 5px;
+  }
+
+  .showcase h1 {
+    width: 100vw;
+    font-size: 40px;
+  }
+
+  .showcase p {
+    width: 100vw;
+  }
+
+  .showcase .btn,
+  .showcase .btn:nth-of-type(2) {
+    padding: 20px 30px;
+  }
+
+  .showcase-two {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .testimonial {
+    text-align: center;
+  }
+
+  /* Container */
+  .container,
+  .fixed-container {
+    flex-direction: column;
+  }
+
+  .container img {
+    width: 80vw;
+  }
+
+  .container div {
+    width: 90vw;
+  }
+
+  .fixed-container {
+    height: fit-content;
+    gap: 0;
+  }
+
+  .fixed-container h1,
+  .fixed-container p {
+    padding: 0;
+  }
+
+  .fixed-container li {
+    padding: 20px 0;
+    line-height: 1.2;
+  }
+
+  .fixed-container .btn {
+    margin: 20px 0;
+    ;
+  }
+
+  .texts h1,
+  .text-lg.texts-h1,
+  .texts p {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  /* Grid */
+  .grid-container-two {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .grid-box {
+    padding: 30px 50px;
+  }
+
+  .grid-container-four {
+    grid-template-columns: 1fr;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Footer */
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer div:first-of-type {
+    grid-column: 1 / span 2;
+    padding-bottom: 20px;
+  }
 }
